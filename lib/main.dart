@@ -144,7 +144,7 @@ class MyApp extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(bottom: 20.0),
                                     child: Text(
-                                      '※例として漫画の読書管理を題材にしています。',
+                                      '※本の登録、更新、削除を題材にしています。',
                                       style: TextStyle(
                                         fontSize: 12,
                                         color: Colors.black87,
