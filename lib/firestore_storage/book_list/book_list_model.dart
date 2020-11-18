@@ -15,5 +15,6 @@ class BookListModel extends ChangeNotifier {
 
   Future deleteBook(Book book) async {
     await FirebaseFirestore.instance.collection('books').doc(book.documentId).delete();
+    // TODO Storageからも削除する
   }
 }

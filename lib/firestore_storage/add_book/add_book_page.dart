@@ -9,6 +9,7 @@ import 'add_book_model.dart';
 class AddBookPage extends StatelessWidget {
   AddBookPage({this.book});
   final Book book;
+
   @override
   Widget build(BuildContext context) {
     final bool isUpdate = book != null;
@@ -39,9 +40,10 @@ class AddBookPage extends StatelessWidget {
                           onTap: () async {
                             await model.showImagePicker();
                           },
-                          child: model.imageFile != null
-                              ? Image.file(model.imageFile)
-                              : Container(color: Colors.grey),
+                          child: isUpdate ? Image.network(book.imageURL)
+                              : (model.imageFile != null
+                                ? Image.file(model.imageFile)
+                                : Container(color: Colors.grey)),
                         ),
                       ),
                       TextField(

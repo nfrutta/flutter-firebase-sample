@@ -133,7 +133,7 @@ class MyApp extends StatelessWidget {
                                           Icons.cloud
                                         ),
                                         Text(
-                                          ' Cloud Firestore & Storage',
+                                          ' Cloud Firestore',
                                           style: TextStyle(
                                             fontSize: 20,
                                           ),
@@ -141,15 +141,8 @@ class MyApp extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 20.0),
-                                    child: Text(
-                                      '※漫画の読書管理を題材にしています。',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.black87,
-                                      )
-                                    ),
+                                  SizedBox(
+                                    height: 24,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -158,7 +151,7 @@ class MyApp extends StatelessWidget {
                                         width: 180,
                                         child: RaisedButton(
                                           child: Text(
-                                            '漫画一覧',
+                                            '本一覧',
                                           ),
                                           onPressed: () {
                                             //model.changeText();
@@ -166,6 +159,56 @@ class MyApp extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(builder: (context) => BookListPage()),
                                             );
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Card(
+                            margin: const EdgeInsets.all(8.0),
+                            child: Container(
+                              margin: const EdgeInsets.all(8.0),
+                              width: 320,
+                              height: 140,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 8.0),
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                            Icons.folder
+                                        ),
+                                        Text(
+                                          ' Storage',
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 24,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      SizedBox(
+                                        width: 180,
+                                        child: RaisedButton(
+                                          child: Text(
+                                            'TBD',
+                                          ),
+                                          onPressed: () {
+                                            Scaffold.of(context).showSnackBar(new SnackBar(
+                                              content: new Text('Hello world!'),
+                                            ));
                                           },
                                         ),
                                       ),
@@ -217,48 +260,6 @@ class MyApp extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Card(
-                            margin: const EdgeInsets.all(8.0),
-                            child: Container(
-                              margin: const EdgeInsets.all(8.0),
-                              width: 320,
-                              height: 140,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 8.0),
-                                    child: Row(
-                                      children: [
-                                        Icon(
-                                            Icons.laptop
-                                        ),
-                                        Text(
-                                          ' Functions',
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      SizedBox(
-                                        width: 180,
-                                        child: RaisedButton(
-                                          child: Text(
-                                            'TBD',
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
                         ],
                       ),
                     ),
