@@ -206,9 +206,7 @@ class MyApp extends StatelessWidget {
                                             'TBD',
                                           ),
                                           onPressed: () {
-                                            Scaffold.of(context).showSnackBar(new SnackBar(
-                                              content: new Text('Hello world!'),
-                                            ));
+                                            // TODO: 画面作る
                                           },
                                         ),
                                       ),

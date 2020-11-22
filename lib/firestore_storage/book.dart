@@ -11,4 +11,5 @@ class Book {
   String documentId;
   String title;
   String imageURL;
+  // 登録できる情報を増やす
 }
